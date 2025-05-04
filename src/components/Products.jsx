@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import Navbar from './Navbar';
 import { motion } from 'framer-motion';
 import Footer from './Footer';
@@ -37,6 +37,10 @@ const products = [
 ];
 
 export default function ProductPage() {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <>
       <Navbar />

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import Navbar from './Navbar';
 import Footer from './Footer';
@@ -55,6 +55,11 @@ const sampleProducts = [
 export default function Productdetails() {
   const { id } = useParams();
   const [selectedSize, setSelectedSize] = useState('M');
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [id]); // scrolls to top when component mounts or product ID changes
+
   const product = sampleProducts.find(p => p.id === id);
 
   if (!product) return <div className="text-center mt-20">Product not found</div>;

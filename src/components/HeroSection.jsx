@@ -1,13 +1,16 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom'; // Import Link for navigation
+import { Link } from 'react-router-dom';
 import Navbar from './Navbar';
 import FeaturedICollection from './FeaturedItems';
 import PromoSection from './Promo';
 import Footer from './Footer';
 
 const HeroSection = () => {
-  // Product data with unique IDs for routing
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   const products = [
     {
       id: 1,
@@ -35,15 +38,15 @@ const HeroSection = () => {
       <Navbar />
       {/* Hero Section */}
       <section className="text-center px-4 py-10 bg-white">
-      <motion.h1
-  initial={{ opacity: 0, y: -30 }}
-  animate={{ opacity: 1, y: 0 }}
-  transition={{ duration: 0.7 }}
-  className="text-3xl sm:text-4xl md:text-5xl font-semibold leading-tight text-center mb-12"
->
-  DIVE INTO A WORLD OF ENDLESS <br className="hidden md:block" />
-  <span className="text-green-500">FASHION POSSIBILITIES</span>
-</motion.h1>
+        <motion.h1
+          initial={{ opacity: 0, y: -30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.7 }}
+          className="text-3xl sm:text-4xl md:text-5xl font-semibold leading-tight text-center mb-12"
+        >
+          DIVE INTO A WORLD OF ENDLESS <br className="hidden md:block" />
+          <span className="text-green-500">FASHION POSSIBILITIES</span>
+        </motion.h1>
 
         <p className="mt-4 text-gray-500 max-w-xl mx-auto text-sm sm:text-base">
           Discover Your Wardrobe with our Fashion Finds. Discover Your Signature Style for Fashion Autumn.

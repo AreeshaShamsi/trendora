@@ -1,10 +1,15 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import Navbar from './Navbar';
 import { motion } from "framer-motion";
-import Footer from './Footer'; // Adjust the import path as needed
-import ourstory from '../assets/ourstory.png'; // Make sure you have an image and path is correct
+import Footer from './Footer';
+import ourstory from '../assets/ourstory.png';
 
 export default function AboutPage() {
+  // Scroll to top when component mounts
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <>
       <Navbar />
@@ -58,8 +63,6 @@ export default function AboutPage() {
             From humble beginnings to becoming a trusted brand, our journey has always been about empowering people to express themselves through style. 
             We blend creativity, quality, and sustainability in every collection — making sure you not only look good but feel good too.
           </p>
-
-          {/* Insert Image after story */}
           <img 
             src={ourstory} 
             alt="Our Story" 

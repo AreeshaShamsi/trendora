@@ -4,6 +4,11 @@ import { motion } from 'framer-motion';
 import Footer from './Footer'; // Adjust the import path as needed
 
 export default function Contact() {
+  
+    // Scroll to top when component mounts
+    useEffect(() => {
+      window.scrollTo(0, 0);
+    }, []);
   return (
     <>
       <Navbar />
