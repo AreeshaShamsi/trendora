@@ -1,4 +1,4 @@
-import React from 'react';
+import React,{ useEffect } from 'react';
 import Navbar from './Navbar';
 import { motion } from 'framer-motion';
 import Footer from './Footer'; // Adjust the import path as needed
